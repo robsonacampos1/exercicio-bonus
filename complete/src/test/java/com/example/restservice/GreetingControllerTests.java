@@ -34,6 +34,7 @@ public class GreetingControllerTests {
 	@Autowired
 	private MockMvc mockMvc;
 
+	// Este método retorna uma mensagem padrão.
 	@Test
 	public void noParamGreetingShouldReturnDefaultMessage() throws Exception {
 
@@ -41,6 +42,7 @@ public class GreetingControllerTests {
 				.andExpect(jsonPath("$.content").value("Hello, World!"));
 	}
 
+	// Este método retorna uma mensagem personalizada
 	@Test
 	public void paramGreetingShouldReturnTailoredMessage() throws Exception {
 
